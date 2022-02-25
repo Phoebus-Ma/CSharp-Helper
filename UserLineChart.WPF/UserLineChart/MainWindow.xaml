@@ -1,0 +1,23 @@
+﻿<Window x:Class="UserLineChart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserLineChart"
+        xmlns:UserControl="clr-namespace:UserLineChart.UserControls"
+        mc:Ignorable="d"
+        Title="UserLineChart" Height="450" Width="800">
+    <Grid>
+        <UserControl:ucLineChart
+            x:Name="m_linechartShow"
+            Height="220"
+            Width="360"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,10,0,0"
+            RenderTransformOrigin="0.5,0.5"/>
+
+        <Button Content="Start" Height="30" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,300,0,0" Click="UserLineChart_StartClick"/>
+        <Button Content="Stop" Height="30" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,300,0,0" Click="UserLineChart_StopClick"/>
+    </Grid>
+</Window>
