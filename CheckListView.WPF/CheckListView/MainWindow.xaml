@@ -1,0 +1,68 @@
+﻿<Window x:Class="CheckListView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckListView"
+        mc:Ignorable="d"
+        Title="CheckListView" Height="450" Width="460" Loaded="WindowLoad">
+    <Grid>
+        <Border
+            BorderBrush="Black"
+            BorderThickness="1"
+            Height="310"
+            Width="210"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10,10,0,0">
+
+            <ListView
+                x:Name="m_checklist"
+                Style="{StaticResource CheckListViewStyle}"
+                Height="300"
+                Width="200"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="10,10,0,0">
+                <ListView.View>
+                    <GridView ColumnHeaderContainerStyle="{StaticResource GridViewColumnHeaderStyle}">
+                        <GridViewColumn Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding colorName}" IsChecked="{Binding colorChkd}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Width="60">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Background="{Binding colorBkgd}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+
+        <Border
+            BorderBrush="Black"
+            BorderThickness="1"
+            Height="310"
+            Width="210"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="230,10,0,0">
+            <TextBlock x:Name="m_checkstatus" TextWrapping="Wrap"/>
+        </Border>
+
+        <Button
+            Content="Select"
+            Width="50"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="200,360,0,0"
+            Click="CheckList_RefreshClick"/>
+    </Grid>
+</Window>
