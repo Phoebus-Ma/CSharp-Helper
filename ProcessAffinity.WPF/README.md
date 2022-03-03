@@ -4,8 +4,11 @@
 Set process CPU affinity mask and priority.
 
 PID			: Process ID (Number).
+
 Affinity	: Number, Example: 4 cores, if you want use core 0 and core 1, the bin number is (0011) == 3.
+
 Priority	: Select by combox list.
+
 Status		: Display running result(s).
 
 #### Platform

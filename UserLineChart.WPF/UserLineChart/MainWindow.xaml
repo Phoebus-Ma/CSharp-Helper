@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UserLineChart"
         xmlns:UserControl="clr-namespace:UserLineChart.UserControls"
         mc:Ignorable="d"
-        Title="UserLineChart" Height="450" Width="800">
+        Title="UserLineChart" Height="400" Width="400">
     <Grid>
         <UserControl:ucLineChart
             x:Name="m_linechartShow"

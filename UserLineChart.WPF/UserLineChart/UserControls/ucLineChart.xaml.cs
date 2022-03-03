@@ -20,7 +20,9 @@ namespace UserLineChart.UserControls
     /// </summary>
     public partial class ucLineChart : UserControl
     {
-        private double xPos = 0, xMove = 0;
+        private const int LineNum = 2;
+        private double[] xPos = new double[LineNum];
+        private double[] xMove = new double[LineNum];
 
         public ucLineChart()
         {
@@ -29,24 +31,27 @@ namespace UserLineChart.UserControls
 
         public int AddPonit(int index, Point drawPoint, double areaWidth)
         {
-            xPos += 2;
-            drawPoint.X = xPos;
-            xMove = drawPoint.X * (-1) + areaWidth - 2;
-            m_ucChartCanvas.Margin = new Thickness(xMove, 0, 0, 0);
-
-            if (0 == index)
+            if (index < LineNum)
             {
-                m_ucChartPoly1.Points.Add(drawPoint);
+                xPos[index] += 2;
+                drawPoint.X = xPos[index];
+                xMove[index] = drawPoint.X * (-1) + areaWidth - 2;
+                m_ucChartCanvas.Margin = new Thickness(xMove[index], 0, 0, 0);
 
-                if (drawPoint.X > areaWidth)
-                    m_ucChartPoly1.Points.RemoveAt(0);
-            }
-            else
-            {
-                m_ucChartPoly2.Points.Add(drawPoint);
+                if (0 == index)
+                {
+                    m_ucChartPoly1.Points.Add(drawPoint);
 
-                if (drawPoint.X > areaWidth)
-                    m_ucChartPoly1.Points.RemoveAt(0);
+                    if (drawPoint.X > areaWidth)
+                        m_ucChartPoly1.Points.RemoveAt(0);
+                }
+                else
+                {
+                    m_ucChartPoly2.Points.Add(drawPoint);
+
+                    if (drawPoint.X > areaWidth)
+                        m_ucChartPoly1.Points.RemoveAt(0);
+                }
             }
 
             return 0;
