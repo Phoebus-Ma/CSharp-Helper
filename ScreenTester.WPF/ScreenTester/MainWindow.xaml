@@ -1,0 +1,13 @@
+﻿<Window x:Class="ScreenTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreenTester"
+        mc:Ignorable="d"
+        Title="ScreenTester" Height="320" Width="320">
+    <Grid>
+        <Button Content="Auto" Height="30" Width="75" Margin="0,-50,0,0" Click="AutoChangeColor_Click"/>
+        <Button Content="Manual" Height="30" Width="75" Margin="0,50,0,0" Click="ManualChangeColor_Click"/>
+    </Grid>
+</Window>
