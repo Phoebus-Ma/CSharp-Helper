@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,11 +33,43 @@ namespace ScreenTester
             this.KeyDown += KeyDownEvent_CloseWindow;
         }
 
+        private async void ScreenColor_PageLoaded(object sender, RoutedEventArgs e)
+        {
+            string? TestMode = Application.Current.Properties["TestMode"] as string;
+
+            if ("Auto" == TestMode)
+            {
+                int loopCount = ScreenColors.GetColorsCount() * 2;
+
+                await Task.Run(() =>
+                {
+                    Thread.Sleep(100);
+
+                    while (true)
+                    {
+                        btn_color.Dispatcher.Invoke(() =>
+                        {
+                            btn_color.Background = ScreenColors.GetBrushColor(colorIndex);
+                        });
+
+                        colorIndex++;
+
+                        if (colorIndex > loopCount)
+                            break;
+
+                        Thread.Sleep(4000);
+                    }
+
+                    colorIndex = 0;
+                });
+
+                Window.GetWindow(this).Close();
+            }
+        }
+
         private void KeyDownEvent_CloseWindow(object sender, KeyEventArgs e)
         {
-            Window window = Window.GetWindow(this);
-
-            window.Close();
+            Window.GetWindow(this).Close();
         }
 
         private void ChangeColor_Click(object sender, RoutedEventArgs e)

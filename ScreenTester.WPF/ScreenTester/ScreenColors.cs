@@ -23,6 +23,11 @@ namespace ScreenTester
             Colors.Black,
         };
 
+        public static int GetColorsCount()
+        {
+            return backColor.Count;
+        }
+
         public static SolidColorBrush GetBrushColor(int index)
         {
             SolidColorBrush solidcolor = new SolidColorBrush(backColor[index % backColor.Count]);

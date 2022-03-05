@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ScreenTester"
       mc:Ignorable="d"
       d:DesignHeight="320" d:DesignWidth="320"
-      Title="ScreenTestPage" ShowsNavigationUI="False" Initialized="ScreenColor_PageInit">
+      Title="ScreenTestPage" ShowsNavigationUI="False" Initialized="ScreenColor_PageInit" Loaded="ScreenColor_PageLoaded">
 
     <Page.Resources>
         <Style x:Key="NoMouserOverButtonStyle" TargetType="{x:Type Button}">

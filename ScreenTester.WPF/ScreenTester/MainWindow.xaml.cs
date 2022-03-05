@@ -27,12 +27,31 @@ namespace ScreenTester
 
         private void AutoChangeColor_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationWindow naviwindow = new NavigationWindow();
+
+            Application.Current.Properties["TestMode"] = "Auto";
+
+            /* Set window source. */
+            naviwindow.Source = new Uri("ScreenTestPage.xaml", UriKind.RelativeOrAbsolute);
+
+            /* Set window fullscreen. */
+            naviwindow.WindowState  = WindowState.Normal;
+            naviwindow.WindowStyle  = WindowStyle.None;
+            naviwindow.ResizeMode   = ResizeMode.NoResize;
+            naviwindow.Topmost      = true;
+            naviwindow.Left         = 0.0;
+            naviwindow.Top          = 0.0;
+            naviwindow.Width        = SystemParameters.PrimaryScreenWidth;
+            naviwindow.Height       = SystemParameters.PrimaryScreenHeight;
+
+            naviwindow.Show();
         }
 
         private void ManualChangeColor_Click(object sender, RoutedEventArgs e)
         {
             NavigationWindow naviwindow = new NavigationWindow();
+
+            Application.Current.Properties["TestMode"] = "Manual";
 
             /* Set window source. */
             naviwindow.Source = new Uri("ScreenTestPage.xaml", UriKind.RelativeOrAbsolute);
