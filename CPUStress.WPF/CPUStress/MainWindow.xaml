@@ -1,0 +1,39 @@
+﻿<Window x:Class="CPUStress.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPUStress"
+        mc:Ignorable="d"
+        Title="CPU Stress" Height="150" Width="450"
+        Loaded="Window_Loaded">
+    <Grid Background="Azure">
+        <RadioButton x:Name="rdb_single" Content="Single" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,25,0,0"/>
+
+        <RadioButton x:Name="rdb_all" Content="All" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,25,0,0"/>
+
+        <RadioButton x:Name="rdb_cores" Content="Core(s)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,25,0,0"/>
+        <TextBox Text="1" Width="40" IsEnabled="{Binding ElementName=rdb_cores, Path=IsChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,22,0,0"/>
+
+        <CheckBox x:Name="ckb_affinity" Content="Affinity" HorizontalAlignment="Left" Margin="300,25,0,0" VerticalAlignment="Top"/>
+
+        <Slider
+            x:Name="sld_cpustress"
+            Foreground="SlateBlue"
+            Width="320"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            TickPlacement="TopLeft"
+            Minimum="0"
+            Maximum="100"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="50,65,0,0"
+            ValueChanged="CPUStress_Changed"/>
+        <Label
+            Content="{Binding ElementName=sld_cpustress, Path=Value}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="380,60,0,0"/>
+    </Grid>
+</Window>

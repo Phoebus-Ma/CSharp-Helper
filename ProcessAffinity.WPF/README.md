@@ -15,5 +15,5 @@ Status		: Display running result(s).
 dotnet core csharp for Visual Studio Windows x64.
 
 #### Preview
-![DisplayColors Preview](https://raw.githubusercontent.com/Phoebus-Ma/DesktopApp/main/PreviewImages/process-cpu-affinity-for-wpf.png)
+![ProcessAffinity Preview](https://raw.githubusercontent.com/Phoebus-Ma/DesktopApp/main/PreviewImages/process-cpu-affinity-for-wpf.png)
 
