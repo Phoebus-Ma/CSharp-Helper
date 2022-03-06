@@ -1,0 +1,46 @@
+﻿<Window x:Class="ThreadAffinity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThreadAffinity"
+        mc:Ignorable="d"
+        Title="ThreadAffinity" Height="250" Width="300">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Height="160" Width="280" VerticalAlignment="Top" Margin="0,10,0,0"/>
+
+        <!-- Process Name. -->
+        <Label Content="PID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,20,0,0"/>
+        <TextBox x:Name="tbox_pid" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,25,0,0"/>
+        
+        <!-- Thread ID. -->
+        <Label Content="TID" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbox_tid" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="100,55,0,0">
+            <ComboBoxItem Content="Null" IsSelected="True"/>
+        </ComboBox>
+
+        <!-- Process CPU Affinity Mask. -->
+        <Label Content="Affinity" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbox_affinity" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,85,0,0"/>
+
+        <!-- Process Priority. -->
+        <Label Content="Priority" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,110,0,0"/>
+        <ComboBox x:Name="cbox_priority" HorizontalAlignment="Left" Width="120" VerticalAlignment="Top" Margin="100,115,0,0">
+            <ComboBoxItem Content="Unselected" IsSelected="True"/>
+            <ComboBoxItem Content="Idle"/>
+            <ComboBoxItem Content="Lowest"/>
+            <ComboBoxItem Content="Below normal"/>
+            <ComboBoxItem Content="Normal"/>
+            <ComboBoxItem Content="Above normal"/>
+            <ComboBoxItem Content="Highest"/>
+            <ComboBoxItem Content="Time critical"/>
+        </ComboBox>
+
+        <!-- Process Mask Status. -->
+        <Label x:Name="lbl_status" Content="Status" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,140,0,0"/>
+
+        <!-- Active User Configure. -->
+        <Button Content="Refresh" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,185,0,0" Click="RefreshTID_StartClick"/>
+        <Button Content="Run" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,185,0,0" Click="SetThrdMask_StartClick"/>
+    </Grid>
+</Window>
