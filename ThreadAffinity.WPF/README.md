@@ -13,6 +13,16 @@ Priority	: Select by combox list.
 
 Status		: Display running result(s).
 
+#### Step
+
+1. Input Process ID to PID textbox.
+
+2. Click Refresh button.
+
+3. Select PID, affinity, priority parameters.
+
+4. Click Run button.
+
 #### Platform
 dotnet core csharp for Visual Studio Windows x64.
 

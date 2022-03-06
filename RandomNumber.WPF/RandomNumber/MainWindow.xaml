@@ -1,0 +1,40 @@
+﻿<Window x:Class="RandomNumber.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomNumber"
+        mc:Ignorable="d"
+        Title="Random Number" Height="400" Width="400">
+    <Grid>
+        <TextBox x:Name="tbox_result" Height="80" Width="350" IsReadOnly="True" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,10,0,0"/>
+
+        <GroupBox Header="1. No. Range" Height="60" Width="350" VerticalAlignment="Top" Margin="0,100,0,0">
+            <Grid>
+                <Label Content="Begin" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                <TextBox x:Name="tbox_begin" Text="0" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,10,0,0"/>
+
+                <Label Content="End" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,5,0,0"/>
+                <TextBox x:Name="tbox_end" Text="100" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,10,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="2. Count" Height="60" Width="350" VerticalAlignment="Top" Margin="0,170,0,0">
+            <Grid>
+                <RadioButton x:Name="rdb_cnt1" Content="1" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,10,0,0"/>
+                <RadioButton x:Name="rdb_cnt5" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,10,0,0"/>
+                <RadioButton x:Name="rdb_cnt10" Content="10" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,10,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="3. Type" Height="60" Width="350" VerticalAlignment="Top" Margin="0,240,0,0">
+            <Grid>
+                <RadioButton x:Name="rdb_typeInt" Content="Int" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,10,0,0"/>
+                <RadioButton x:Name="rdb_typeFloat" Content="Float" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,10,0,0"/>
+                <RadioButton x:Name="rdb_typeBool" Content="Bool" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,10,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <Button Content="Generate" Width="75" VerticalAlignment="Top" Margin="0,320,0,0" Click="GenerateNumbers_Click"/>
+    </Grid>
+</Window>
