@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Lang_Time">Tiempo</sys:String>
+    <sys:String x:Key="Lang_Hello">Hola!</sys:String>
+    <sys:String x:Key="Lang_Year">Año</sys:String>
+    <sys:String x:Key="Lang_Month">Mes</sys:String>
+    <sys:String x:Key="Lang_Day">Un día</sys:String>
+    <sys:String x:Key="Lang_Week">Semana</sys:String>
+    <sys:String x:Key="Lang_Hour">Horas</sys:String>
+    <sys:String x:Key="Lang_Minute">Minutos</sys:String>
+    <sys:String x:Key="Lang_Second">Segundo</sys:String>
+    <sys:String x:Key="Lang_ID">Documento de identidad</sys:String>
+    <sys:String x:Key="Lang_Name">Nombre</sys:String>
+    <sys:String x:Key="Lang_Male">Hombres</sys:String>
+    <sys:String x:Key="Lang_Female">Mujeres</sys:String>
+    <sys:String x:Key="Lang_Age">Edad</sys:String>
+    <sys:String x:Key="Lang_Address">Dirección</sys:String>
+    <sys:String x:Key="Lang_Language">Idioma</sys:String>
+    <sys:String x:Key="Lang_BtnOK">Muy bien.</sys:String>
+    <sys:String x:Key="Lang_Cancel">Cancelar</sys:String>
+    <sys:String x:Key="Lang_Update">Actualización</sys:String>
+    <sys:String x:Key="Msg_Time">Tiempo actual del sistema</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Lang_Time">время</sys:String>
+    <sys:String x:Key="Lang_Hello">Здравствыйте</sys:String>
+    <sys:String x:Key="Lang_Year">год</sys:String>
+    <sys:String x:Key="Lang_Month">месяц</sys:String>
+    <sys:String x:Key="Lang_Day">день</sys:String>
+    <sys:String x:Key="Lang_Week">неделя</sys:String>
+    <sys:String x:Key="Lang_Hour">час</sys:String>
+    <sys:String x:Key="Lang_Minute">минута</sys:String>
+    <sys:String x:Key="Lang_Second">второй</sys:String>
+    <sys:String x:Key="Lang_ID">удостоверение личности</sys:String>
+    <sys:String x:Key="Lang_Name">имя</sys:String>
+    <sys:String x:Key="Lang_Male">мужской пол</sys:String>
+    <sys:String x:Key="Lang_Female">женский</sys:String>
+    <sys:String x:Key="Lang_Age">возраст</sys:String>
+    <sys:String x:Key="Lang_Address">адрес</sys:String>
+    <sys:String x:Key="Lang_Language">язык</sys:String>
+    <sys:String x:Key="Lang_BtnOK">OK</sys:String>
+    <sys:String x:Key="Lang_Cancel">отмена</sys:String>
+    <sys:String x:Key="Lang_Update">Обновить</sys:String>
+    <sys:String x:Key="Msg_Time">текущее Системное время</sys:String>
+</ResourceDictionary>

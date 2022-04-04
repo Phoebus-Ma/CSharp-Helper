@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Lang_Time">时间</sys:String>
+    <sys:String x:Key="Lang_Hello">你好</sys:String>
+    <sys:String x:Key="Lang_Year">年</sys:String>
+    <sys:String x:Key="Lang_Month">月</sys:String>
+    <sys:String x:Key="Lang_Day">日</sys:String>
+    <sys:String x:Key="Lang_Week">周</sys:String>
+    <sys:String x:Key="Lang_Hour">小时</sys:String>
+    <sys:String x:Key="Lang_Minute">分钟</sys:String>
+    <sys:String x:Key="Lang_Second">秒</sys:String>
+    <sys:String x:Key="Lang_ID">编号</sys:String>
+    <sys:String x:Key="Lang_Name">名字</sys:String>
+    <sys:String x:Key="Lang_Male">男性</sys:String>
+    <sys:String x:Key="Lang_Female">女性</sys:String>
+    <sys:String x:Key="Lang_Age">年龄</sys:String>
+    <sys:String x:Key="Lang_Address">地址</sys:String>
+    <sys:String x:Key="Lang_Language">语言</sys:String>
+    <sys:String x:Key="Lang_BtnOK">确认</sys:String>
+    <sys:String x:Key="Lang_Cancel">取消</sys:String>
+    <sys:String x:Key="Lang_Update">更新</sys:String>
+    <sys:String x:Key="Msg_Time">当前系统时间</sys:String>
+</ResourceDictionary>

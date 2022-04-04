@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Lang_Time">الوقت .</sys:String>
+    <sys:String x:Key="Lang_Hello">مرحبا</sys:String>
+    <sys:String x:Key="Lang_Year">سنة</sys:String>
+    <sys:String x:Key="Lang_Month">شهر .</sys:String>
+    <sys:String x:Key="Lang_Day">اليوم .</sys:String>
+    <sys:String x:Key="Lang_Week">أسابيع</sys:String>
+    <sys:String x:Key="Lang_Hour">ساعة .</sys:String>
+    <sys:String x:Key="Lang_Minute">دقيقة .</sys:String>
+    <sys:String x:Key="Lang_Second">ثانية .</sys:String>
+    <sys:String x:Key="Lang_ID">رقم</sys:String>
+    <sys:String x:Key="Lang_Name">إسم</sys:String>
+    <sys:String x:Key="Lang_Male">ذكور</sys:String>
+    <sys:String x:Key="Lang_Female">المؤنث</sys:String>
+    <sys:String x:Key="Lang_Age">سن</sys:String>
+    <sys:String x:Key="Lang_Address">عنوان</sys:String>
+    <sys:String x:Key="Lang_Language">لغة</sys:String>
+    <sys:String x:Key="Lang_BtnOK">أكّد</sys:String>
+    <sys:String x:Key="Lang_Cancel">ألغى</sys:String>
+    <sys:String x:Key="Lang_Update">تجديد .</sys:String>
+    <sys:String x:Key="Msg_Time">النظام الحالي في الوقت</sys:String>
+</ResourceDictionary>
