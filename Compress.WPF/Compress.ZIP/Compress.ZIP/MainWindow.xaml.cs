@@ -29,36 +29,40 @@ namespace Compress.ZIP
 
         private void SelectSourceFolder_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            saveFileDialog.Filter = "Directory|*.this.directory";
-            saveFileDialog.FileName = "select";
-
-
-            saveFileDialog.ShowDialog();
-
-            string path = saveFileDialog.FileName;
-
-            path = path.Replace("\\select.this.directory", "");
-            path = path.Replace(".this.directory", "");
-
-            if (!System.IO.Directory.Exists(path))
+            /* Source folder. */
+            if (true == m_rbzip.IsChecked)
             {
-                System.IO.Directory.CreateDirectory(path);
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+                saveFileDialog.Filter = "Directory|*.this.directory";
+                saveFileDialog.FileName = "select";
+
+
+                saveFileDialog.ShowDialog();
+
+                string path = saveFileDialog.FileName;
+
+                path = path.Replace("\\select.this.directory", "");
+                path = path.Replace(".this.directory", "");
+
+                if (!System.IO.Directory.Exists(path))
+                {
+                    System.IO.Directory.CreateDirectory(path);
+                }
+
+                m_tbsource.Text = path;
             }
-
-            m_tbsource.Text = path;
-        }
-
-        private void SelectSourceFile_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog srcFile = new OpenFileDialog();
-
-            srcFile.Filter = "All files|*.*";
-
-            if (true == srcFile.ShowDialog())
+            /* ZIP File. */
+            else if (true == m_rbunzip.IsChecked)
             {
-                m_tbsource.Text = srcFile.FileName;
+                OpenFileDialog srcFile = new OpenFileDialog();
+
+                srcFile.Filter = "Zip file|*.zip|All file|*.*";
+
+                if (true == srcFile.ShowDialog())
+                {
+                    m_tbsource.Text = srcFile.FileName;
+                }
             }
         }
 
@@ -85,18 +89,6 @@ namespace Compress.ZIP
             m_tbdest.Text = path;
         }
 
-        private void SelectDestFile_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog srcFile = new OpenFileDialog();
-
-            srcFile.Filter = "App|*.zip|All files|*.*";
-
-            if (true == srcFile.ShowDialog())
-            {
-                m_tbdest.Text = srcFile.FileName;
-            }
-        }
-
         private void StartCompress_Click(object sender, RoutedEventArgs e)
         {
             if (m_tbsource.Text.Length < 0)
@@ -113,15 +105,11 @@ namespace Compress.ZIP
 
             if (true == m_rbzip.IsChecked)
             {
-                ZipCompress.Compress();
+                ZipCompress.CompressDirectory(m_tbsource.Text, m_tbdest.Text);
             }
             else if (true == m_rbunzip.IsChecked)
             {
-                ZipCompress.DecompressFile();
-            }
-            else if (true == m_rbadd.IsChecked)
-            {
-                ZipCompress.AddfileToZip();
+                ZipCompress.DecompressFile(m_tbsource.Text, m_tbdest.Text);
             }
         }
     }

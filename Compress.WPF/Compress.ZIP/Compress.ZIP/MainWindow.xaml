@@ -5,24 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Compress.ZIP"
         mc:Ignorable="d"
-        Title="ZIP Compressor" Height="260" Width="300">
+        Title="ZIP Compressor" Height="200" Width="300">
     <Grid>
         <!--Source path: directory or file.-->
         <Label Content="   Source" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,0,0"/>
-        <TextBox x:Name="m_tbsource" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,25,0,0"/>
-        <Button Content="Folder" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,55,0,0" Click="SelectSourceFolder_Click"/>
-        <Button Content="File" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,55,0,0" Click="SelectSourceFile_Click"/>
+        <TextBox x:Name="m_tbsource" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,25,0,0"/>
+        <Button Content="..." Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,25,0,0" Click="SelectSourceFolder_Click"/>
 
-        <!--destination path: directory or file.-->
-        <Label Content="destination" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0"/>
-        <TextBox x:Name="m_tbdest" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,85,0,0"/>
-        <Button Content="Folder" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,115,0,0" Click="SelectDestFoler_Click"/>
-        <Button Content="File" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,115,0,0" Click="SelectDestFile_Click"/>
-        
-        <RadioButton x:Name="m_rbzip" Content="Zip" IsChecked="True" HorizontalAlignment="Left" Margin="50,155,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="m_rbunzip" Content="Unzip" HorizontalAlignment="Left" Margin="110,155,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="m_rbadd" Content="Add" HorizontalAlignment="Left" Margin="180,155,0,0" VerticalAlignment="Top"/>
+        <!--destination path: directory.-->
+        <Label Content="destination" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox x:Name="m_tbdest" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,55,0,0"/>
+        <Button Content="..." Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,55,0,0" Click="SelectDestFoler_Click"/>
 
-        <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,185,0,0" Click="StartCompress_Click"/>
+        <RadioButton x:Name="m_rbzip" Content="Zip" IsChecked="True" HorizontalAlignment="Left" Margin="80,95,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="m_rbunzip" Content="Unzip" HorizontalAlignment="Left" Margin="150,95,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,125,0,0" Click="StartCompress_Click"/>
     </Grid>
 </Window>
