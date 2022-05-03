@@ -1,0 +1,39 @@
+﻿<Window x:Class="Encryption.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Encryption"
+        mc:Ignorable="d"
+        x:Name="m_windowEncrypt"
+        Title="Encryption" Height="450" Width="600">
+    <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Source" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="m_EncryptSrc" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Height="120"/>
+
+        <Label Content="Destination" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="m_EncryptDest" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Height="120"/>
+
+        <Grid Grid.Row="1">
+            <ComboBox x:Name="m_cbEncrypt" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+                <ComboBoxItem Content="MD5" IsSelected="True"/>
+                <ComboBoxItem Content="SHA1"/>
+                <ComboBoxItem Content="SHA256"/>
+                <ComboBoxItem Content="SHA384"/>
+                <ComboBoxItem Content="SHA512"/>
+            </ComboBox>
+
+            <RadioButton x:Name="m_rbEncrypt" Content="Encryption" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0"/>
+            <RadioButton x:Name="m_rbDecrypt" Content="Decryption" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="200,0,0,0"/>
+            <RadioButton x:Name="m_rbCompare" Content="Compare" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="300,0,0,0"/>
+
+            <Button Content="Clear" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,100,0" Width="70" Click="ClearContent_Click"/>
+            <Button Content="Start" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Width="70" Click="StartEncryption_Click"/>
+        </Grid>
+    </Grid>
+</Window>
