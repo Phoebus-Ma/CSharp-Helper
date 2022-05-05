@@ -1,0 +1,20 @@
+﻿<Window x:Class="Compress.GZIP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Compress.GZIP"
+        mc:Ignorable="d"
+        Title="GZIP Compress" Height="150" Width="300">
+    <Grid>
+        <!--Source path: file.-->
+        <Label Content="   Source" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,20,0,0"/>
+        <TextBox x:Name="m_tbsource" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,25,0,0"/>
+        <Button Content="..." Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,25,0,0" Click="SelectSourceFile_Click"/>
+
+        <RadioButton x:Name="m_rbgzip" Content="GZip" IsChecked="True" HorizontalAlignment="Left" Margin="80,55,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="m_rbungzip" Content="Ungzip" HorizontalAlignment="Left" Margin="150,55,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,85,0,0" Click="StartCompress_Click"/>
+    </Grid>
+</Window>
