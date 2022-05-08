@@ -12,7 +12,7 @@ namespace Encryption
      */
     public class MD5Encrypt
     {
-        public static int MD5Generate(string src, out string dest)
+        public static int Generate(string src, out string dest)
         {
             using (var md5Hash = MD5.Create())
             {
@@ -24,11 +24,11 @@ namespace Encryption
             return 0;
         }
 
-        public static int MD5Compare(string src, string dest)
+        public static int Compare(string src, string dest)
         {
             string temp = "";
 
-            MD5Generate(src, out temp);
+            Generate(src, out temp);
 
             return temp.CompareTo(dest);
         }
