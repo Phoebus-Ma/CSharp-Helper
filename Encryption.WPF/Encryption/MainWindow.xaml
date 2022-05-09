@@ -27,6 +27,7 @@
                 <ComboBoxItem Content="SHA384"/>
                 <ComboBoxItem Content="SHA512"/>
                 <ComboBoxItem Content="DES"/>
+                <ComboBoxItem Content="AES"/>
             </ComboBox>
 
             <RadioButton x:Name="m_rbEncrypt" Content="Encryption" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0"/>

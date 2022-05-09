@@ -22,6 +22,7 @@ namespace Encryption
     public partial class MainWindow : Window
     {
         private static DES DESalg = DES.Create();
+        private static Aes AESalg = Aes.Create();
 
         public MainWindow()
         {
@@ -102,6 +103,27 @@ namespace Encryption
                     else if (true == m_rbCompare.IsChecked)
                     {
                         int isSame = DESEncrypt.Compare(m_EncryptSrc.Text, DESalg.Key, DESalg.IV, m_EncryptDest.Text);
+
+                        MessageBox.Show("Compare Result: " + (0 == isSame).ToString());
+                    }
+                    break;
+
+                case 6: // AES
+                    if (true == m_rbEncrypt.IsChecked)
+                    {
+                        AESEncrypt.Generate(m_EncryptSrc.Text, AESalg.Key, AESalg.IV, out destData);
+
+                        m_EncryptDest.Text = destData;
+                    }
+                    else if (true == m_rbDecrypt.IsChecked)
+                    {
+                        AESEncrypt.Parse(m_EncryptSrc.Text, AESalg.Key, AESalg.IV, out destData);
+
+                        m_EncryptDest.Text = destData;
+                    }
+                    else if (true == m_rbCompare.IsChecked)
+                    {
+                        int isSame = AESEncrypt.Compare(m_EncryptSrc.Text, AESalg.Key, AESalg.IV, m_EncryptDest.Text);
 
                         MessageBox.Show("Compare Result: " + (0 == isSame).ToString());
                     }
