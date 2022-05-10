@@ -23,6 +23,7 @@ namespace Encryption
     {
         private static DES DESalg = DES.Create();
         private static Aes AESalg = Aes.Create();
+        private static RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 
         public MainWindow()
         {
@@ -124,6 +125,27 @@ namespace Encryption
                     else if (true == m_rbCompare.IsChecked)
                     {
                         int isSame = AESEncrypt.Compare(m_EncryptSrc.Text, AESalg.Key, AESalg.IV, m_EncryptDest.Text);
+
+                        MessageBox.Show("Compare Result: " + (0 == isSame).ToString());
+                    }
+                    break;
+
+                case 7: // RSA
+                    if (true == m_rbEncrypt.IsChecked)
+                    {
+                        RSAEncrypt.Generate(m_EncryptSrc.Text, RSA.ExportParameters(false), false, out destData);
+
+                        m_EncryptDest.Text = destData;
+                    }
+                    else if (true == m_rbDecrypt.IsChecked)
+                    {
+                        RSAEncrypt.Parse(m_EncryptSrc.Text, RSA.ExportParameters(true), false, out destData);
+
+                        m_EncryptDest.Text = destData;
+                    }
+                    else if (true == m_rbCompare.IsChecked)
+                    {
+                        int isSame = RSAEncrypt.Compare(m_EncryptSrc.Text, RSA.ExportParameters(true), false, m_EncryptDest.Text);
 
                         MessageBox.Show("Compare Result: " + (0 == isSame).ToString());
                     }

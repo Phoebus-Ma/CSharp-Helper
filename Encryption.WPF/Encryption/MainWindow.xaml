@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Encryption"
         mc:Ignorable="d"
         x:Name="m_windowEncrypt"
-        Title="Encryption" Height="450" Width="600">
+        Title="Encryption" Height="450" Width="600" MinWidth="600" MaxWidth="600" MinHeight="450" MaxHeight="450" ResizeMode="NoResize">
     <Grid Background="#FFE5E5E5">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -28,6 +28,7 @@
                 <ComboBoxItem Content="SHA512"/>
                 <ComboBoxItem Content="DES"/>
                 <ComboBoxItem Content="AES"/>
+                <ComboBoxItem Content="RSA"/>
             </ComboBox>
 
             <RadioButton x:Name="m_rbEncrypt" Content="Encryption" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="100,0,0,0"/>
