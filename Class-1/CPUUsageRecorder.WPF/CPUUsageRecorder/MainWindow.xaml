@@ -1,0 +1,13 @@
+﻿<Window x:Class="CPUUsageRecorder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPUUsageRecorder"
+        mc:Ignorable="d"
+        Title="CPU Usage Recorder" Height="240" Width="320">
+    <Grid>
+        <Label Content="CPU Usage(%):" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,50,0"/>
+        <Label x:Name="tbl_usage" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,0,0,0"/>
+    </Grid>
+</Window>
